@@ -30,14 +30,15 @@ class Employee {
 
 class Manager extends Employee {
   // Реалізуйте конструктор та збільшіть salary на 10000
-  constructor(salary: number) {
-    super("Alex", "FullStack", salary); // Виклик батьківського конструктора
+  constructor(name: string, department: string, salary: number) {
+    super(name, department, salary); // Виклик батьківського конструктора
     this.salary += 10000;
   }
 }
 
-const hacker = new Manager(666);
+const hacker = new Manager('Alex','Fullstack', 666);
 const data = hacker.getEmployeeDetails();
 console.log("Information about employee:", data);
 
 export {};
+
